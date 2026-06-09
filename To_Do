@@ -1,0 +1,25 @@
+Objective: The objective of this lab is to understand match control flow statements in Rust. By the end of the lab, you should be able to use the `match` expression to perform pattern matching and control the flow of your program based on different cases.
+
+Instructions:
+Open your Rust programming environment and navigate to the project directory.
+
+Use the included main.rs file in the src directory for this lab.
+
+In your project directory, open a terminal or command prompt.
+
+Run the command `cargo run` to compile and execute the program.
+
+Observe the output in the console. The program prompts you to enter a greeting, and based on the input, it uses a `match` expression to perform pattern matching and prints a corresponding message.
+
+Reflection Questions:
+What is the purpose of the `match` control flow statement in Rust? How does it differ from using multiple `if` statements or `if-else` chains?
+
+In the provided code, what would happen if you added another pattern to the `match` expression, such as "How are you?" => println!("I'm doing well!") ? How would the program output change when you enter that specific greeting?
+
+Challenge Questions:
+Extend the program by adding more patterns to the `match` expression. For example, you can handle additional greetings like `"Good morning"`, `"Good evening"`, or any other greetings you can think of. Print appropriate messages for each pattern.
+
+Modify the program to handle case-insensitive matching for greetings. Allow the user to input greetings in any case (e.g., "HELLO", "hello", "HeLlO") and still match the patterns correctly.
+
+
+Remember to test your modifications by running the program and observing the output. Explore different patterns and cases to enhance your understanding of match control flow statements in Rust.
