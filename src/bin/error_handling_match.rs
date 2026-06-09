@@ -2,7 +2,7 @@ use std::fs::File;
 use std::io::{BufRead, BufReader};
 
 fn main() {
-    let file = File::open("non_existent_file.txt");
+    let file = File::open("permission_denied_file.txt");
     let file = match file {
         Ok(file) => file,
         Err(error) => match error.kind() {
