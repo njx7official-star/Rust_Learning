@@ -11,6 +11,9 @@ fn main() {
     match name.trim() {
         "Good Bye" => println!("Sorry to see you go."),
         "Hello" => println!("Hi, nice to meet you!"),
+        "How are you?" => println!("I'm doing well!"),
+        "Good morning" => println!("Whats up nj ?? Good Morning"),
+        "Good evening" => println!("Good evening..! , Nj"),
         _ => println!("I can't find a greeting, good bye."),
     }
 }
