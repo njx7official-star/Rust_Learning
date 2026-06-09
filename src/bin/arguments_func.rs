@@ -1,3 +1,5 @@
+use std::io;
+
 fn sum(numbers: &[i32]) -> i32 {
     let mut result = 0;
     for number in numbers {
@@ -8,7 +10,13 @@ fn sum(numbers: &[i32]) -> i32 {
 
 fn main() {
     // There are no variadic arguments in Rust
-    let numbers = [1, 2, 3, 4, 5];
+    let mut numbers = String::new();
+    io::stdin().read_line(&mut numbers).expect("Failed Input");
+    let numbers: Vec<i32> = numbers
+        .split_whitespace()
+        .map(|item| item.parse().expect("Invalid number"))
+        .collect();
+
     let result = sum(&numbers);
     println!("The sum is {}", result);
 }
