@@ -8,12 +8,12 @@ fn main() {
         .expect("Failed to read input");
 
     // use of match expression to pattern match against variable "name"
-    match name.trim() {
-        "Good Bye" => println!("Sorry to see you go."),
-        "Hello" => println!("Hi, nice to meet you!"),
-        "How are you?" => println!("I'm doing well!"),
-        "Good morning" => println!("Whats up nj ?? Good Morning"),
-        "Good evening" => println!("Good evening..! , Nj"),
+    match name.trim().to_lowercase().as_str() {
+        "good bye" => println!("Sorry to see you go."),
+        "hello" => println!("Hi, nice to meet you!"),
+        "how are you?" => println!("I'm doing well!"),
+        "good morning" => println!("Whats up nj ?? Good Morning"),
+        "good evening" => println!("Good evening..! , Nj"),
         _ => println!("I can't find a greeting, good bye."),
     }
 }
