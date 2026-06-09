@@ -17,6 +17,8 @@ fn main() {
         .map(|item| item.parse().expect("Invalid number"))
         .collect();
 
+    let average = sum(&numbers) / numbers.len() as i32;
     let result = sum(&numbers);
     println!("The sum is {}", result);
+    println!("The average is {}", average);
 }
