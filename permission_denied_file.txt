@@ -1,0 +1,3 @@
+Nj new line added
+but the Rust program should not be allowed to read it.
+So File::open should return PermissionDenied.
