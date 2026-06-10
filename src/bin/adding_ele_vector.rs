@@ -3,10 +3,15 @@ fn beg_end_vec(v: &mut Vec<i32>, value: i32) {
     v.push(value);
     println!("the updated vector = {:?}", v);
 }
-
+fn join_vectors(v: &mut Vec<i32>, w: &mut Vec<i32>) {
+    v.append(w);
+    println!("New joined vectors = {:?}", v);
+}
 fn main() {
     let mut v = vec![1, 2, 3];
-    beg_end_vec(&mut v, 3);
+    // beg_end_vec(&mut v, 3);
+    let mut w = vec![9, 0];
+    join_vectors(&mut v, &mut w);
     v.push(4);
     //println!("{:?}", v); // Output: [1, 2, 3, 4]
 
