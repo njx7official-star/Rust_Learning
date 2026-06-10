@@ -25,6 +25,9 @@ impl User {
             .unwrap_or_else(|| self.email.clone());
         self.username = user_name_femail;
     }
+    fn change_uri(&mut self , uri: String){
+        self.uri = uri;
+    }
 }
 
 fn main() {
@@ -45,4 +48,11 @@ fn main() {
     );
     new_user.from_email();
     println!("new user name {}",new_user.username);
+
+    println!("{}",new_user.uri);
+    let uri = String::from("https:123.com");
+    new_user.change_uri(uri);
+
+    println!("{}",new_user.uri);
+
 }
