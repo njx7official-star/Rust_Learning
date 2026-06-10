@@ -8,11 +8,18 @@ fn get_item(index: usize) {
     // print the value
     println!("The value at index {} is {:?}", index, value);
 }
-
+fn sum_vec(ve: &Vec<i32>) -> i32 {
+    let mut sum = 0;
+    for i in ve {
+        sum += i;
+    }
+    sum
+}
 fn main() {
     let vec = vec![1, 2, 3, 4, 5];
     get_item(3);
-
+    let sum_from = sum_vec(&vec);
+    println!("the sum of vectors is = {}", sum_from);
     // Retrieve a value at a specific index
     let third_value = vec[2];
     //println!("The third value in the vector is: {}", third_value);
