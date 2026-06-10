@@ -22,6 +22,18 @@ fn supported_regions(w: WineRegions) {
     }
 }
 
+fn popularity_region(w: WineRegions) -> String {
+    let mut popularity = String::new();
+    match w {
+        WineRegions::Bordeaux | WineRegions::Tuscany | WineRegions::NapaValley => {
+            popularity.push_str("Very Popular");
+        }
+        WineRegions::Palakkad => popularity.push_str("My place is popular"),
+        _ => popularity.push_str("Not popular"),
+    }
+    popularity
+}
+
 fn main() {
     let wine1 = Wine {
         name: String::from("Chateau Margaux"),
@@ -38,8 +50,12 @@ fn main() {
     };
 
     // println!("Wine 1: {} from {:?}", wine1.name, wine1.region);
-    // println!("Wine 2: {} from {:?}", wine2.name, wine2.region);
+    println!("Wine 2: {} from {:?}", wine2.name, wine2.region);
     println!("Wine 3 : {:?}", wine3);
-    supported_regions(wine1.region);
+    // supported_regions(wine1.region);
     supported_regions(WineRegions::Rioja);
+    let w3 = popularity_region(wine3.region);
+    let w1 = popularity_region(wine1.region);
+    println!("Popularity {}", w1);
+    println!("Popularity {}", w3);
 }
