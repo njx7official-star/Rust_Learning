@@ -8,7 +8,7 @@ fn get_item(index: usize) {
     // print the value
     println!("The value at index {} is {:?}", index, value);
 }
-fn sum_vec(ve: &Vec<i32>) -> i32 {
+fn sum_vec(ve: &[i32]) -> i32 {
     let mut sum = 0;
     for i in ve {
         sum += i;
