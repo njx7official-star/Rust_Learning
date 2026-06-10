@@ -6,8 +6,10 @@ enum WineRegions {
     Tuscany,
     Rioja,
     NapaValley,
+    Palakkad,
 }
 
+#[derive(Debug)]
 struct Wine {
     name: String,
     region: WineRegions, // wine regions used as a type
@@ -30,9 +32,14 @@ fn main() {
         name: String::from("Barolo"),
         region: WineRegions::Tuscany,
     };
+    let wine3 = Wine {
+        name: String::from("Kerala"),
+        region: WineRegions::Palakkad,
+    };
 
     // println!("Wine 1: {} from {:?}", wine1.name, wine1.region);
     // println!("Wine 2: {} from {:?}", wine2.name, wine2.region);
+    println!("Wine 3 : {:?}", wine3);
     supported_regions(wine1.region);
     supported_regions(WineRegions::Rioja);
 }
